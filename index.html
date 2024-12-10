@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Medication Management</h1>
+        </div>
+        <div class="form-container">
+            <h2>Add New Medicine</h2>
+            <p>Fill out the fields and hit the Save Button to add it!</p>
+            <form id="medication-form">
+                <label for="medicine-name">Name*</label>
+                <input type="text" id="medicine-name" placeholder="Name (e.g. Ibuprofen)" required>
+
+                <label for="type">Type*</label>
+                <select id="type" required>
+                    <option value="" disabled selected>Select an Option</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="capsule">Capsule</option>
+                    <option value="liquid">Solution (Liquid)</option>
+                    <option value="drops">Drops</option>
+                    <option value="inhaler">Inhaler</option>
+                    <option value="powder">Powder</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <!-- Dynamically added Specify Type field will appear here -->
+                <div id="type-options"></div>
+
+                <label for="dose">Dose*</label>
+                <input type="text" id="dose" placeholder="Dose (e.g. 100mg)" required>
+
+                <label for="frequency">Frequency*</label>
+                <select id="frequency" required>
+                    <option value="" disabled selected>Select an Option</option>
+                    <option value="everyday">Everyday</option>
+                    <option value="every-other-day">Every Other Day</option>
+                    <option value="specific-days">Specific Days of the Week</option>
+                    <option value="only-as-needed">Only as needed</option>
+                </select>
+
+                <!-- Dynamic frequency options -->
+                <div id="frequency-options"></div>
+
+                <!-- Dynamic "How often per day" and time input -->
+                <div id="times-per-day-options"></div>
+
+                <div id="time-options"></div>
+
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
